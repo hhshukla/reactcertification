@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://mocki.io/v1/5ac0d9e0-a46c-4881-8336-6484fd37bac3`
+          `https://mocki.io/v1/bd4f5f35-83cd-428f-92fd-cd61f7cd7a24`
         );
         const data = await response.json();
 
@@ -54,6 +54,7 @@ const ProductDetails = () => {
             >
               {selecteProductItem?.cta}
             </a>
+            {console.log(selecteProductItem?.cta)}
             <div className="mt-4">
               <h5 className="bg-white rounded-md p-2  w-full md:w-20 text-center text-black">
                 {selecteProductItem?.prize}
