@@ -40,6 +40,7 @@ const ProductDetails = () => {
       {selecteProductItem && (
         <div className="my-6 md:flex bg-mainBg rounded-md">
           <img
+            alt=""
             src={selecteProductItem?.image}
             className="md:w-1/2 rounded-md"
           />
@@ -49,7 +50,7 @@ const ProductDetails = () => {
               {selecteProductItem?.description}
             </h4>
             <a
-              href=""
+              href="/"
               className="text-md text-white bg-black mt-2 p-2 capitalize"
             >
               {selecteProductItem?.cta}
