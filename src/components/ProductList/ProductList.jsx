@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
-// import { ProductListData } from "./ProductList";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
@@ -46,7 +45,7 @@ const ProductList = () => {
 
   const TitleClick = (title) => {
     setActiveTab((selected) => (selected === title ? null : title));
-    if (activeTab == title) {
+    if (activeTab === title) {
       setSelectedTitle([]);
     }
   };
@@ -57,7 +56,7 @@ const ProductList = () => {
         <div key={i}>
           <div
             tabIndex={0}
-            onClick={() => TitleClick(card.title)}
+            onClick={() => TitleClick(card?.title)}
             className="mx-4 my-6 bg-subColor p-5 rounded-md transition ease-in-out delay-50  hover:-translate-y-1 hover:scale-110  duration-300"
           >
             <img src={card?.image} />
@@ -72,7 +71,10 @@ const ProductList = () => {
               {card?.title}
             </h3>
             <h4 className=" text-md text-white">{card?.description}</h4>
-            <Link to={`/${card._id}`} className="text-md text-white capitalize">
+            <Link
+              to={`/${card?._id}`}
+              className="text-md text-white capitalize"
+            >
               {card?.cta}
             </Link>
             <div className=" mt-4">

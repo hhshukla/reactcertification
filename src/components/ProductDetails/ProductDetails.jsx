@@ -54,7 +54,6 @@ const ProductDetails = () => {
             >
               {selecteProductItem?.cta}
             </a>
-            {console.log(selecteProductItem?.cta)}
             <div className="mt-4">
               <h5 className="bg-white rounded-md p-2  w-full md:w-20 text-center text-black">
                 {selecteProductItem?.prize}
